@@ -17,8 +17,8 @@
 
 //   getElementById   //
 // console.log(document.getElementById('header-title'));
-var headerTitle = document.getElementById('header-title');
-var header = document.getElementById('main-header');
+// var headerTitle = document.getElementById('header-title');
+// var header = document.getElementById('main-header');
 // console.log(headerTitle);
 // headerTitle.textContent = 'Hello World';
 // headerTitle.innerText = 'Goodbye World';
@@ -94,3 +94,82 @@ var header = document.getElementById('main-header');
     // odd[i].style.backgroundColor = 'red';
     // even[i].style.backgroundColor = 'purple';
 // }
+
+
+
+//   ATRAVESSANDO O DOM   //
+var itemList = document.querySelector('#items');
+  //parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = 'red';
+// console.log(itemList.parentNode.parentNode);
+
+
+  //parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = 'red';
+// console.log(itemList.parentElement.parentElement);
+
+  //childNodes
+// console.log(itemList.childNodes);
+
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+
+// itemList.children[1].style.backgroundColor = 'blue';
+
+  //firstChild
+  // console.log(itemList.firstChild);
+  //firstElementChild
+  // console.log(itemList.firstElementChild);
+  // itemList.firstElementChild.textContent = 'Hello First';
+
+  //lastChild
+  // console.log(itemList.lastChild);
+  //lastElementChild
+  // console.log(itemList.lastElementChild);
+  // itemList.lastElementChild.textContent = 'Hello Last';
+
+  //nextSibling
+  // console.log(itemList.nextSibling);
+  //nextElementSibling
+  // console.log(itemList.nextElementSibling);
+
+  //previousSibling
+  // console.log(itemList.previousSibling);
+  //previousElementSibling
+  // console.log(itemList.previousElementSibling);
+  // itemList.previousElementSibling.style.color = 'green';
+
+  //createElement
+
+
+  // Criar uma div
+  var newDiv = document.createElement('div');
+
+  // Adicionar classe  
+  newDiv.className = 'hello';
+
+  // Adicionar ID
+  newDiv.id = 'hello1';
+
+  // Adicionar attr
+  newDiv.setAttribute('title', 'hello Div');
+
+  // Criar text node
+  var newDivText = document.createTextNode('Hello World');
+
+ // Adicionar text a div
+ newDiv.appendChild(newDivText);
+
+ // Inserindo elemento no Dom
+
+ var container = document.querySelector('header .container');
+ var h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '30px';
+newDiv.style.fontWeight = '600';
+
+container.insertBefore(newDiv, h1);
